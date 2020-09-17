@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0"
+         metadata-complete="true">
+    <com.kuang.servlet>
+        <com.kuang.servlet-name>filedown</com.kuang.servlet-name>
+        <com.kuang.servlet-class>com.kuang.servlet.FileServlet</com.kuang.servlet-class>
+    </com.kuang.servlet>
+    <com.kuang.servlet-mapping>
+        <com.kuang.servlet-name>filedown</com.kuang.servlet-name>
+        <url-pattern>/down</url-pattern>
+    </com.kuang.servlet-mapping>
+
+    <com.kuang.servlet>
+        <com.kuang.servlet-name>ImageServlet</com.kuang.servlet-name>
+        <com.kuang.servlet-class>com.kuang.servlet.ImageServlet</com.kuang.servlet-class>
+    </com.kuang.servlet>
+    <com.kuang.servlet-mapping>
+        <com.kuang.servlet-name>ImageServlet</com.kuang.servlet-name>
+        <url-pattern>/img</url-pattern>
+    </com.kuang.servlet-mapping>
+
+    <com.kuang.servlet>
+        <com.kuang.servlet-name>RedirectServlet</com.kuang.servlet-name>
+        <com.kuang.servlet-class>com.kuang.servlet.RedirectServlet</com.kuang.servlet-class>
+    </com.kuang.servlet>
+    <com.kuang.servlet-mapping>
+        <com.kuang.servlet-name>RedirectServlet</com.kuang.servlet-name>
+        <url-pattern>/red</url-pattern>
+    </com.kuang.servlet-mapping>
+
+    <com.kuang.servlet>
+        <com.kuang.servlet-name>requset</com.kuang.servlet-name>
+        <com.kuang.servlet-class>com.kuang.servlet.RequestTest</com.kuang.servlet-class>
+    </com.kuang.servlet>
+    <com.kuang.servlet-mapping>
+        <com.kuang.servlet-name>requset</com.kuang.servlet-name>
+        <url-pattern>/login</url-pattern>
+    </com.kuang.servlet-mapping>
+
+</web-app>

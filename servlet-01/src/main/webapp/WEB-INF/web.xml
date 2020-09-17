@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0"
+         metadata-complete="true">
+
+    <!--    &lt;!&ndash;    注册Servlet&ndash;&gt;-->
+    <!--    <com.kuang.servlet>-->
+    <!--        <com.kuang.servlet-name>hello</com.kuang.servlet-name>-->
+    <!--        <com.kuang.servlet-class>com.kuang.servlet.HelloServlet</com.kuang.servlet-class>-->
+
+    <!--    </com.kuang.servlet>-->
+
+    <!--    &lt;!&ndash;Servlet请求路径&ndash;&gt;-->
+    <!--    <com.kuang.servlet-mapping>-->
+    <!--        <com.kuang.servlet-name>hello</com.kuang.servlet-name>-->
+    <!--        <url-pattern>hello</url-pattern>-->
+
+    <!--    </com.kuang.servlet-mapping>-->
+
+
+    <!--注册Servlet-->
+
+    <!--        请求路径-->
+    <com.kuang.servlet>
+        <com.kuang.servlet-name>hello</com.kuang.servlet-name>
+
+        <com.kuang.servlet-class>com.kuang.servlet.HelloServlet</com.kuang.servlet-class>
+    </com.kuang.servlet>
+
+    <!--Servlet的请求路径-->
+    <com.kuang.servlet-mapping>
+        <com.kuang.servlet-name>hello</com.kuang.servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </com.kuang.servlet-mapping>
+
+    <!--    <com.kuang.servlet-mapping>-->
+    <!--        <com.kuang.servlet-name>hello</com.kuang.servlet-name>-->
+    <!--        <url-pattern>/hello/*</url-pattern>-->
+    <!--    </com.kuang.servlet-mapping>-->
+
+    <!--    <com.kuang.servlet-mapping>-->
+    <!--        <com.kuang.servlet-name>hello</com.kuang.servlet-name>-->
+    <!--        <url-pattern>/hello/1</url-pattern>-->
+    <!--    </com.kuang.servlet-mapping>-->
+    <!--可以自定义后缀实现请求映射-->
+    <com.kuang.servlet-mapping>
+        <com.kuang.servlet-name>hello</com.kuang.servlet-name>
+        <url-pattern>*.qingjiang</url-pattern>
+    </com.kuang.servlet-mapping>
+
+    <!--    优先级问题-->
+    <!--    指定了固有的映射路径优先级最高，如果找不到就会走默认的处理请求；-->
+    <!--404-->
+    <com.kuang.servlet>
+        <com.kuang.servlet-name>error</com.kuang.servlet-name>
+        <com.kuang.servlet-class>com.kuang.servlet.ErrorServlet</com.kuang.servlet-class>
+    </com.kuang.servlet>
+    <com.kuang.servlet-mapping>
+        <com.kuang.servlet-name>error</com.kuang.servlet-name>
+        <url-pattern>/*</url-pattern>
+    </com.kuang.servlet-mapping>
+
+
+</web-app>

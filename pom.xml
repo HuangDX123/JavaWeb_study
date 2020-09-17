@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>Servlet</artifactId>
+
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>com.kuang.servlet-01</module>
+        <module>com.kuang.servlet-02</module>
+        <module>response</module>
+        <module>requset</module>
+        <module>requset</module>
+        <module>requset1</module>
+    </modules>
+
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/javax.com.kuang.servlet/javax.com.kuang.servlet-api -->
+        <dependency>
+            <groupId>javax.com.kuang.servlet</groupId>
+            <artifactId>javax.com.kuang.servlet-api</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.com.kuang.servlet.jsp/javax.com.kuang.servlet.jsp-api -->
+        <dependency>
+            <groupId>javax.com.kuang.servlet.jsp</groupId>
+            <artifactId>javax.com.kuang.servlet.jsp-api</artifactId>
+            <version>2.3.3</version>
+
+        </dependency>
+
+
+    </dependencies>
+
+    <!--在build中配置resources,来防止我们资源导出失败的问题-->
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <excludes>
+                    <exclude>**/*.properties</exclude>
+                    <exclude>**/*.xml</exclude>
+                </excludes>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+
+</project>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0"
+         metadata-complete="true">
+    <!--配置一些web应用初始化参数-->
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:mysql://localhost:3306/mybatis</param-value>
+    </context-param>
+
+    <display-name>Archetype Created Web Application</display-name>
+
+    <com.kuang.servlet>
+        <com.kuang.servlet-name>hello</com.kuang.servlet-name>
+        <com.kuang.servlet-class>com.kuang.servlet.HelloServlet</com.kuang.servlet-class>
+    </com.kuang.servlet>
+    <com.kuang.servlet-mapping>
+        <com.kuang.servlet-name>hello</com.kuang.servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </com.kuang.servlet-mapping>
+
+    <com.kuang.servlet>
+        <com.kuang.servlet-name>sd5</com.kuang.servlet-name>
+        <com.kuang.servlet-class>com.kuang.servlet.ServletDemo05</com.kuang.servlet-class>
+    </com.kuang.servlet>
+    <com.kuang.servlet-mapping>
+        <com.kuang.servlet-name>sd5</com.kuang.servlet-name>
+        <url-pattern>/sd5</url-pattern>
+    </com.kuang.servlet-mapping>
+
+
+</web-app>
